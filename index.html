@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Пригласительное</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="d-flex flex-column gap-4">
+            <div class="photo">
+                <img src="./assets/photo.jpg" alt="photo"/>
+                <div class="photo-text great-vibes-regular">
+                    <div class="text-start" style="margin-left: 20px;">Илья</div>
+                    <div class="text-center fs-1" style="margin-right: 70px;">&</div>
+                    <div class="text-end" style="margin-right: 20px;">Наталья</div>
+                </div>
+            </div>
+            <div class="d-flex flex-column gap-4 px-3">
+                <div class="text-center text-uppercase">
+                    <h1 class="fs-2 mb-2">
+                        РАДЫ ПРИГЛАСИТЬ ВАС НА НАШУ СВАДЬБУ
+                    </h1>
+                    <p class="fs-1 fw-bolder lh-sm mb-0">14 ФЕВРАЛЯ 2025 ГОДА!</p>
+                </div>
+                <div class="day-program">
+                    <h1 class="fs-1 text-uppercase text-center text-dark">Программа дня</h1>
+                    <p class="text-center fs-4">
+                        <span class="text-dark fw-bold">—15:30—</span>
+                        <br>
+                        <span class="text-dark fw-medium">Cбор гостей</span>
+                        <br>
+                        <span class="fw-light fs-6">Ждём Вас у банкетного зала "Зефир" для подготовки
+                            к началу церемонии бракосочетания</span>
+                    </p>
+                    <p class="text-center fs-4">
+                        <span class="text-dark fw-bold">—16:00—</span>
+                        <br>
+                        <span class="text-dark fw-medium">Начало церемонии</span>
+                        <br>
+                        <span class="fw-light fs-6">Выездная регистрация начнется в 16:00</span>
+                    </p>
+                    <p class="text-center fs-4">
+                        <span class="text-dark fw-bold">—17:00—</span>
+                        <br>
+                        <span class="text-dark fw-medium">Торжество</span>
+                        <br>
+                        <span class="fw-light fs-6">Свадебное торжество пройдёт в банкетном зале "Зефир"</span>
+                    </p>
+                </div>
+                <div class="text-center">
+                    <h1 class="fs-1 mb-4">МЕСТО ПРОВЕДЕНИЯ ТОРЖЕСТВА</h1>
+                    <p class="fs-5 fw-light mb-4">ВЫЕЗДНАЯ РЕГИСТРАЦИЯ И ПОСЛЕДУЮЩИЙ ДУШЕВНЫЙ ВЕЧЕР БУДУТ ПРОХОДИТЬ В БАНКЕТНОМ ЗАЛЕ "ЗЕФИР"</p>
+                    <p class="fs-5 fw-light">ОН НАХОДИТСЯ ПО АДРЕСУ<br>
+                        Г. ЧЕБОКСАРЫ, ПР-Т МАКСИМА ГОРЬКОГО 2М</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1868.902104139331!2d47.20464270281926!3d56.14825722907383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415a3840155b0823%3A0x563b047c2dfb821f!2z0L_RgG_RgdC_0LXQutGCINCc0LDQutGB0LjQvNCwINCT0L7RgNGM0LrQvtCz0L4sIDIsINCn0LXQsdC-0LrRgdCw0YDRiywg0KfRg9Cy0LDRiNGB0LrQsNGPINCg0LXRgdC_LiwgNDI4MDAw!5e0!3m2!1sru!2sru!4v1734392352011!5m2!1sru!2sru" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="col-12 col-md-8">
+                        <div class="remove-content text-center">
+                            <h1 class="fs-2 text-uppercase mb-4">Вы будете на свадьбе?</h1>
+                            <div class="row row-cols-2 g-2">
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-outline-danger w-100" data-value="0" data-action="handleSureClick">Нет</button>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-lg btn-primary w-100" data-value="1" data-action="handleSureClick">Да</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-content" style="display: none;">
+                            <p class="fs-5 text-center text-uppercase mb-0">пожалуйста</p>
+                            <h1 class="fs-2 text-center text-uppercase lh-1 mb-4">Заполните форму</h1>
+                            <form class="d-flex flex-column gap-2" autocomplete="off">
+                                <div class="form-group text-center">
+                                    <label for="side">Со стороны кого?</label>
+                                    <select class="form-select" data-telegram="Сторона:" id="side" name="side">
+                                        <option value="" selected>Выберите...</option>
+                                        <option value="Жениха">Жениха</option>
+                                        <option value="Невесты">Невесты</option>
+                                    </select>
+                                </div>
+                                <div class="form-group text-center">
+                                    <label for="count">Сколько человек?</label>
+                                    <input class="form-control" data-telegram="Количество человек:" type="number" name="count" id="count" value="1">
+                                </div>
+                                <div class="form-group text-center mb-3">
+                                    <label for="more-details">Имя и фамилия каждого гостя</label>
+                                    <textarea class="form-control" data-telegram="Имена и фамилии гостей:" type="text" name="more-details" id="more-details" placeholder="Иванов Василий, Петр Петров"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-outline-secondary">Вперед</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column gap-3 align-items-center">
+                    <div class="organizator-img">
+                        <img src="./assets/organizator.jpg" class="w-100"/>
+                    </div>
+                    <p class="fs-5 text-center">
+                        ПО ВОПРОСАМ МОЖНО ОБРАЩАТЬСЯ К<br> ОРГАНИЗАТОРУ СВАДЬБЫ:<br><br>
+                        ЮЛИЯ<br>+7 (927) 862-75-76
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/jquery.v3.7.1.js"></script>
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
